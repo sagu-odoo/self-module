@@ -8,5 +8,6 @@ class EventProperty(models.Model):
     place=fields.Char(required=True)
     description=fields.Text(required=True) 
     date=fields.Text(required=True)
-
+    event_type_id = fields.Many2many("event.type","relationalfield")
+    
     
