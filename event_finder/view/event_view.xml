@@ -2,7 +2,7 @@
 <odoo>
      <record id="event_action" model="ir.actions.act_window">
           <field name="name">event</field>
-          <field name="res_model">event.event</field>
+          <field name="res_model">in.event.event</field>
           <field name="view_mode">tree,form,graph</field>
      </record>
           <!-- <record id="event__view_form" model="ir.ui.view">

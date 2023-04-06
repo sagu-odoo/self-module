@@ -1,6 +1,7 @@
-# from odoo import models,fields
+from odoo import models,fields
 
-# class EventRegistration(models.Model):
-#     # _name ='in.event.registration'
-#     # _inherit=['event.registration']
+class EventRegistration(models.Model):
+    _name ='event.registration'
     
+
+    attende=fields.Many2many()

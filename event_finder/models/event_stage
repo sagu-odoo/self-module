@@ -1,0 +1,5 @@
+from odoo import fields,models
+
+class EventStage(models.Model):
+    _name='ef.event.stage'
+    _inherit=['event.stage']

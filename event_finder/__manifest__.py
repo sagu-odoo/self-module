@@ -4,7 +4,7 @@
     'author': "sagu",
     'category': 'Event Finder',
     # data files always loaded at installation
-    'depends':['event_event'],
+    'depends':['base','event'],
     'data': [
          'security/ir.model.access.csv',
          'view/event_view.xml',
