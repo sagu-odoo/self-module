@@ -1,8 +1,12 @@
 from odoo import fields,models
 
 class EventTicket(models.Model):
-    _name='ef.event.ticket'
-    _inherit=['event.type.ticket','event.event.ticket']
-    ticket_quantity=fields.Integer(default=1)
-    ticket_type=fields.Selection([('classic','Classic'),('premium','Premium')])
-    
+    _name='event.ticket'
+   
+    ticket_type = fields.Selection(selection={("classic","Classic"),('standard','Standard'),('premium','Premium')})
+
+    event_name_id = fields.Many2one('event.event')
+
+    ticket_price = fields.Integer()
+
+

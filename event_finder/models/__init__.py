@@ -1,1 +1,1 @@
-from . import even_event,event_attende,event_location,event_registration,event_ticket,event_tag
+from . import even_event,event_registration,event_tag,event_tag_category

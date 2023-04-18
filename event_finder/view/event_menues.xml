@@ -1,14 +1,12 @@
 <?xml version="1.0"?>
 <odoo>
-     <menuitem id="test_menu_root" name="Event Finder">
-        <menuitem id="test_fir_level_menu" name="Home">
-        <menuitem id="1st_level_action" action = "event_action"/>
+     <menuitem id="test_menu_root" name="Event Finder" web_icon="event_finder,static/description/hy.png">
+        <menuitem id="test_fir_level_menu" name="Event Book">
+        <menuitem id="1st_level_action"  name = "Event" action = "event_action" sequence='1'/>
+           <menuitem id="1st_event_level_action" name ="Event Book" action="event_action" sequence='2'/>
+           <menuitem id="2nd_event_level_action" name="Available Show" action ="event_action" sequence='3'/>
         </menuitem>
-         <menuitem id="test_first_level_menu" name="User">
-            <menuitem id="first_level_action" action="event_action"/>
-            </menuitem>
-        <menuitem id="test_second_level_menu" name="Organiser">
-            <menuitem id="second_level_action" action="event_finder_action2"/>
-            </menuitem>
+        <menuitem id="test_second_level_menu" name="Event Organise"  action = "event_action1" >
+                </menuitem>
         </menuitem> 
 </odoo>

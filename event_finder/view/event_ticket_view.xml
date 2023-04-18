@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="event_ticket_action" model="ir.actions.act_window">
+        <field name="name">event.ticket.action</field>
+        <field name="res_model">event.ticket</field>
+        <field name="view_mode">tree,form</field>
+   </record>
+   
+</odoo>

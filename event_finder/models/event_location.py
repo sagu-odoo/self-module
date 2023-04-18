@@ -2,8 +2,12 @@ from odoo import fields,models
 
 class EventLocation(models.Model):
     _name='event.location'
-    name = fields.Char(required=True)
-    address=fields.Text()
-    capacity=fields.Integer(required=True)
-    event_id=fields.One2many('event.event','event_location_id')
+    event_location_name = fields.Char(required=True)
+    event_address=fields.Text()
+    event_capacity=fields.Integer(required=True)
     
+    event_location_price = fields.Integer()
+    event_booking_start = fields.Date()
+    event_ending_start = fields.Date()
+    
+

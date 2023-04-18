@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="event_tag_action1" model="ir.actions.act_window">
+        <field name="name">event</field>
+        <field name="res_model">event.tag</field>
+        <field name="view_mode">tree,form</field>
+   </record>
+
+    <!-- <record id="event_event_view_tree" model='ir.ui.view'>
+        <field name="name">event.event.tree</field>
+        <field name="model">event.event</field>
+        <field name="arch" type="xml">
+        <tree string="Event_tree">
+             <field name=""/>
+            <field name=""/>
+            </tree>
+        </field>
+   </record> -->
+</odoo>

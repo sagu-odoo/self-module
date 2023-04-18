@@ -2,14 +2,63 @@
 <odoo>
      <record id="event_action" model="ir.actions.act_window">
           <field name="name">event</field>
-          <field name="res_model">in.event.event</field>
-          <field name="view_mode">tree,form,graph</field>
+          <field name="res_model">event.event</field>
+          <field name="view_mode">tree,form</field>
      </record>
-          <!-- <record id="event__view_form" model="ir.ui.view">
-               <field name="name">event.event.view.form</field>
-               <field name="model">event.event</field>
+     <record id="event_action1" model="ir.actions.act_window">
+          <field name="name">event</field>
+          <field name="res_model">event.event</field>
+          <field name="view_mode">tree,form</field>
+     </record>
 
-               <field name="arch" type="xml">
-               </field>
-          </record> -->
-     </odoo>
+     <record id="event_event_view_tree" model='ir.ui.view'>
+          <field name="name">event.event.tree</field>
+          <field name="model">event.event</field>
+          <field name="arch" type="xml">
+          <tree string="Event">
+               <field name="note" />
+               <!-- <field name="tag_ids" /> -->
+               <field name="description" optional="hide" />
+               <!-- <field name="organizer_id" /> -->
+               <!-- <field name="event_type_id" /> -->
+          </tree>
+          </field>
+     </record>
+     <record id="event_event_view_form" model='ir.ui.view'>
+          <field name="name">event.form</field>
+          <field name="model">event.event</field>
+          <field name="arch" type="xml">
+          <form string="Event">
+          <sheet>
+               <h1><field name="name" placeholder="Event Name"/></h1>
+               <group>
+               <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+               <field name="description" optional="hide" />
+               <field name="active" />
+               <!-- <field name="event_type_id" /> -->
+               </group>
+          <notebook>
+               <page name="Details" >
+                    <group>
+                    <group>
+                    <field name="event_location"/>
+                    <field name="event_date"/>
+                    </group>
+                    <group>
+                    <field name="event_start_time"/>
+                    <field name="event_end_time"/>
+                    <!-- <field name="event_reviews"/> -->
+                    </group>
+               </group>
+               </page>
+               <page name="Registration">
+                    <field  string = "Registration" name ="registration_ids" />
+               </page>
+               <page name="Customer Care ">
+               </page>
+          </notebook>
+          </sheet>
+          </form>
+          </field>
+     </record>
+</odoo>

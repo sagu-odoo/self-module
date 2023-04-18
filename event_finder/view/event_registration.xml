@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="event_action4" model="ir.actions.act_window">
+        <field name="name">event</field>
+        <field name="res_model">event.registration</field>
+        <field name="view_mode">tree,form</field>
+   </record>
+    <record id="event_registration_view_tree" model="ir.ui.view">
+        <field name="name">event.registration.tree</field>
+        <field name="model">event.registration</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="event_id" />
+                <field name="active" />
+                <field name="name" />
+                <field name="email" />
+                <field name="phone" />
+                <field name="date_closed" />
+            </tree>
+        </field>
+    </record>
+</odoo>
